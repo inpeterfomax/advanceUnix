@@ -29,7 +29,7 @@ int main(int argc , char *argv[])
 		exit(1);
 	}
 	/*
-		bind 
+		bind ; use  the common file as the addr.un_addr;
 	*/
 	memset(&server,0,sizeof(struct sockaddr_un));
 	server.sun_family = AF_UNIX;
