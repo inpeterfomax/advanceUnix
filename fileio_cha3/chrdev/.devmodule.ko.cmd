@@ -1,0 +1,1 @@
+cmd_/home/gupingchang/samba/auep/fileio_cha3/chrdev/devmodule.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-2.6.35-22-generic/scripts/module-common.lds --build-id -o /home/gupingchang/samba/auep/fileio_cha3/chrdev/devmodule.ko /home/gupingchang/samba/auep/fileio_cha3/chrdev/devmodule.o /home/gupingchang/samba/auep/fileio_cha3/chrdev/devmodule.mod.o

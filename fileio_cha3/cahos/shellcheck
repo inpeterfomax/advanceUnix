@@ -1,0 +1,610 @@
+./dalvik/dx/src/com/android/dx/ssa/SetFactory.java:34:     * A value of 3072 here is somewhere around 1.125mb of total bitset size.
+./dalvik/dx/src/com/android/dx/ssa/SetFactory.java:42:     * A value of 3072 here is somewhere around 1.125mb of total bitset size.
+Binary file ./dalvik/dx/etc/jasmin.jar matches
+./dalvik/dx/tests/005-cp-top-down/small-class.txt:13:06 41195895 5f8a0903       # 0001: double[415269.3433]
+./dalvik/dx/tests/005-cp-top-down/expected.txt:9:  0001: double{0x411958955f8a0903 / 415269.3433}
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:307:block 0125
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:318:  next 0125
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:321:  pred 0125
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:700:block 01b5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:712:  next 01b5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:715:  pred 01b5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:1021:  next 01d5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:1107:block 01c5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:1120:  next 01c5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:1123:  pred 01c5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:1135:  next 01d5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:1154:  next 01d5
+./dalvik/dx/tests/087-ssa-local-vars/expected.txt:1260:block 01d5
+./dalvik/dx/tests/024-code-bytecode/small-class.txt:24:06 41195895 5f8a0903       # 000d: double[415269.3433]
+./dalvik/dx/tests/024-code-bytecode/small-class.txt:70:11 5432   # 0012: sipush #+5432
+./dalvik/dx/tests/024-code-bytecode/small-class.txt:284:c417 0125 # 0191: wide fload 0125
+./dalvik/dx/tests/024-code-bytecode/small-class.txt:285:c418 0126 # 0195: wide dload 0126
+./dalvik/dx/tests/024-code-bytecode/small-class.txt:289:c438 20f2 # 01a5: wide fstore 20f2
+./dalvik/dx/tests/024-code-bytecode/small-class.txt:293:c484 0002 1000 # 01b5: wide iinc 0002, 1000
+./dalvik/dx/tests/024-code-bytecode/small-class.txt:297:c8 70000000 # 01c5: goto_w 700001c5
+./dalvik/dx/tests/024-code-bytecode/small-class.txt:298:c9 fffffffb # 01ca: jsr_w 000001c5
+./dalvik/dx/tests/024-code-bytecode/expected.txt:20:  000d: double{0x411958955f8a0903 / 415269.3433}
+./dalvik/dx/tests/024-code-bytecode/expected.txt:74:    0027: ldc2_w #411958955f8a0903 // 415269.3433
+./dalvik/dx/tests/024-code-bytecode/expected.txt:273:    0191: wide fload 0125
+./dalvik/dx/tests/024-code-bytecode/expected.txt:274:    0195: wide dload 0126 // category-2
+./dalvik/dx/tests/024-code-bytecode/expected.txt:278:    01a5: wide fstore 20f2
+./dalvik/dx/tests/024-code-bytecode/expected.txt:282:    01b5: wide iinc 0002, #+1000
+./dalvik/dx/tests/024-code-bytecode/expected.txt:286:    01c5: goto_w 700001c5
+./dalvik/dx/tests/024-code-bytecode/expected.txt:287:    01ca: jsr_w 000001c5
+./dalvik/dx/tests/098-dex-jsr-ret-throw/info.txt:1:The enclosed class file was generated with javac version 1.5.0_13-b05. 
+./dalvik/dx/tests/098-dex-jsr-ret-throw/expected.txt:249:block 0175
+./dalvik/dx/tests/098-dex-jsr-ret-throw/expected.txt:262:  next 0175 *
+./dalvik/dx/tests/098-dex-jsr-ret-throw/expected.txt:270:  pred 0175
+./dalvik/dx/tests/098-dex-jsr-ret-throw/expected.txt:521:  next 0185
+./dalvik/dx/tests/098-dex-jsr-ret-throw/expected.txt:533:block 0185
+./dalvik/dx/tests/098-dex-jsr-ret-throw/expected.txt:540:  pred 0185
+./dalvik/dx/tests/054-dex-high16/expected.txt:45:  0028: const/high16 v0, #int 1450704896 // #56780000
+./dalvik/dx/tests/054-dex-high16/expected.txt:56:  000f: const-wide/high16 v0, #long 1152921504606846976 // #1000000000000000
+./dalvik/dx/tests/054-dex-high16/expected.txt:60:  0019: const-wide/high16 v0, #long 1125899906842624 // #0004000000000000
+./dalvik/dx/tests/096-dex-giant-catch/expected.txt:4:      try 0001003b..0001125f
+./dalvik/dx/tests/004-cp-bottom-up/small-class.txt:29:06 41195895 5f8a0903       # 0012: double[415269.3433]
+./dalvik/dx/tests/004-cp-bottom-up/expected.txt:25:  0012: double{0x411958955f8a0903 / 415269.3433}
+./dalvik/libcore/logging/src/main/java/java/util/logging/LoggingMXBean.java:29: * @since 1.5
+./dalvik/libcore/logging/src/main/java/java/util/logging/LogRecord.java:46:    private static final long serialVersionUID = 5372048053134512534L;
+./dalvik/libcore/luni/src/test/java/java/lang/FloatTest.java:25:        // http://code.google.com/p/android/issues/detail?id=4185
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/SerializationStressTest3.java:1208:    public void test_18_105_writeObject() {
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/SerializationStressTest3.java:1556:    public void test_18_115_writeObject() {
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/SerializationStressTest3.java:1924:    public void test_18_125_writeObject() {
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/StreamTokenizerTest.java:242:        assertTrue("Wrong token 1,5",
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/FileTest.java:1259:            f.setLastModified(315550800000L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/FileTest.java:1262:                    lastModifiedTime == 315550800000L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/FileTest.java:2111:            assertTrue(f1.setLastModified(315550800000L));
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/FileTest.java:2114:                    lastModified == 315550800000L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/FilePermissionTest.java:71:        // Regression test for HARMONY-1050
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/LineNumberReaderTest.java:32:    String text = "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n128\n129\n130\n131\n132\n133\n134\n135\n136\n137\n138\n139\n140\n141\n142\n143\n144\n145\n146\n147\n148\n149\n150\n151\n152\n153\n154\n155\n156\n157\n158\n159\n160\n161\n162\n163\n164\n165\n166\n167\n168\n169\n170\n171\n172\n173\n174\n175\n176\n177\n178\n179\n180\n181\n182\n183\n184\n185\n186\n187\n188\n189\n190\n191\n192\n193\n194\n195\n196\n197\n198\n199\n200\n201\n202\n203\n204\n205\n206\n207\n208\n209\n210\n211\n212\n213\n214\n215\n216\n217\n218\n219\n220\n221\n222\n223\n224\n225\n226\n227\n228\n229\n230\n231\n232\n233\n234\n235\n236\n237\n238\n239\n240\n241\n242\n243\n244\n245\n246\n247\n248\n249\n250\n251\n252\n253\n254\n255\n256\n257\n258\n259\n260\n261\n262\n263\n264\n265\n266\n267\n268\n269\n270\n271\n272\n273\n274\n275\n276\n277\n278\n279\n280\n281\n282\n283\n284\n285\n286\n287\n288\n289\n290\n291\n292\n293\n294\n295\n296\n297\n298\n299\n300\n301\n302\n303\n304\n305\n306\n307\n308\n309\n310\n311\n312\n313\n314\n315\n316\n317\n318\n319\n320\n321\n322\n323\n324\n325\n326\n327\n328\n329\n330\n331\n332\n333\n334\n335\n336\n337\n338\n339\n340\n341\n342\n343\n344\n345\n346\n347\n348\n349\n350\n351\n352\n353\n354\n355\n356\n357\n358\n359\n360\n361\n362\n363\n364\n365\n366\n367\n368\n369\n370\n371\n372\n373\n374\n375\n376\n377\n378\n379\n380\n381\n382\n383\n384\n385\n386\n387\n388\n389\n390\n391\n392\n393\n394\n395\n396\n397\n398\n399\n400\n401\n402\n403\n404\n405\n406\n407\n408\n409\n410\n411\n412\n413\n414\n415\n416\n417\n418\n419\n420\n421\n422\n423\n424\n425\n426\n427\n428\n429\n430\n431\n432\n433\n434\n435\n436\n437\n438\n439\n440\n441\n442\n443\n444\n445\n446\n447\n448\n449\n450\n451\n452\n453\n454\n455\n456\n457\n458\n459\n460\n461\n462\n463\n464\n465\n466\n467\n468\n469\n470\n471\n472\n473\n474\n475\n476\n477\n478\n479\n480\n481\n482\n483\n484\n485\n486\n487\n488\n489\n490\n491\n492\n493\n494\n495\n496\n497\n498\n499\n500\n";
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/LineNumberInputStreamTest.java:43:    final String text = "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n128\n129\n130\n131\n132\n133\n134\n135\n136\n137\n138\n139\n140\n141\n142\n143\n144\n145\n146\n147\n148\n149\n150\n151\n152\n153\n154\n155\n156\n157\n158\n159\n160\n161\n162\n163\n164\n165\n166\n167\n168\n169\n170\n171\n172\n173\n174\n175\n176\n177\n178\n179\n180\n181\n182\n183\n184\n185\n186\n187\n188\n189\n190\n191\n192\n193\n194\n195\n196\n197\n198\n199\n200\n201\n202\n203\n204\n205\n206\n207\n208\n209\n210\n211\n212\n213\n214\n215\n216\n217\n218\n219\n220\n221\n222\n223\n224\n225\n226\n227\n228\n229\n230\n231\n232\n233\n234\n235\n236\n237\n238\n239\n240\n241\n242\n243\n244\n245\n246\n247\n248\n249\n250\n251\n252\n253\n254\n255\n256\n257\n258\n259\n260\n261\n262\n263\n264\n265\n266\n267\n268\n269\n270\n271\n272\n273\n274\n275\n276\n277\n278\n279\n280\n281\n282\n283\n284\n285\n286\n287\n288\n289\n290\n291\n292\n293\n294\n295\n296\n297\n298\n299\n300\n301\n302\n303\n304\n305\n306\n307\n308\n309\n310\n311\n312\n313\n314\n315\n316\n317\n318\n319\n320\n321\n322\n323\n324\n325\n326\n327\n328\n329\n330\n331\n332\n333\n334\n335\n336\n337\n338\n339\n340\n341\n342\n343\n344\n345\n346\n347\n348\n349\n350\n351\n352\n353\n354\n355\n356\n357\n358\n359\n360\n361\n362\n363\n364\n365\n366\n367\n368\n369\n370\n371\n372\n373\n374\n375\n376\n377\n378\n379\n380\n381\n382\n383\n384\n385\n386\n387\n388\n389\n390\n391\n392\n393\n394\n395\n396\n397\n398\n399\n400\n401\n402\n403\n404\n405\n406\n407\n408\n409\n410\n411\n412\n413\n414\n415\n416\n417\n418\n419\n420\n421\n422\n423\n424\n425\n426\n427\n428\n429\n430\n431\n432\n433\n434\n435\n436\n437\n438\n439\n440\n441\n442\n443\n444\n445\n446\n447\n448\n449\n450\n451\n452\n453\n454\n455\n456\n457\n458\n459\n460\n461\n462\n463\n464\n465\n466\n467\n468\n469\n470\n471\n472\n473\n474\n475\n476\n477\n478\n479\n480\n481\n482\n483\n484\n485\n486\n487\n488\n489\n490\n491\n492\n493\n494\n495\n496\n497\n498\n499\n500\n501";
+./dalvik/libcore/luni/src/test/java/tests/api/java/io/PrintStreamTest.java:215:        // regression for HARMONY-1195
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/EnumSetTest.java:71:        NO101, NO102, NO103, NO104, NO105, NO106, NO107, NO108, NO109, NO110, NO111, NO112, NO113, NO114, NO115, NO116, NO117, NO118, NO119, NO120,
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/EnumSetTest.java:72:        NO121, NO122, NO123, NO124, NO125, NO126, NO127, NO128, NO129, NO130,
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/SimpleTimeZoneTest.java:505:                .inDaylightTime(new Date(891752400000L + 7200000 - 1)));
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/SimpleTimeZoneTest.java:507:                .inDaylightTime(new Date(891752400000L + 7200000)));
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/ResourceBundleTest.java:268:        // Regression test for Harmony-1759
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/GregorianCalendarTest.java:256:    @AndroidOnly("This test fails on the RI with version 1.5 but succeeds"
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/GregorianCalendarTest.java:849:        g.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/GregorianCalendarTest.java:897:            g.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/BitSetTest.java:196:        eightbs.clear(165);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/BitSetTest.java:197:        assertTrue("Failed to clear bit", !eightbs.get(165));
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/BitSetTest.java:416:        resultbs = bs.get(100, 125);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/BitSetTest.java:424:        resultbs = bs.get(15, 125);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/BitSetTest.java:434:        resultbs = bs.get(70, 145);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/BitSetTest.java:444:        resultbs = bs.get(5, 145);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/BitSetTest.java:450:        correctbs.set(125, 135);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/BitSetTest.java:462:        correctbs.set(125, 135);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:537:        assertEquals(6017546357372606464L, cal.getTimeInMillis());
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:815:        cal1.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:836:        cal1.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:856:        cal.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:1005:        Date d = new Date(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:1007:        cal.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:1120:        cal.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:1155:        cal.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:1156:        assertEquals(1222185600225L, cal.getTimeInMillis());
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:1183:        cal.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/CalendarTest.java:1212:        cal.setTimeInMillis(1222185600225L);
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:1027:        assertEquals("xx12221155&7288233suffix", formatter.toString());
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2176:                {new Date(1147327147578L),  'r', "01:59:07 nachm."}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2272:                {new Date(1147327147578L),  'r', "01:59:07 PM"}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2368:                {new Date(1147327147578L),  'r', "01:59:07 odp."}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2909:                {new BigInteger("-9876543210987654321098765432100000"),     "%o",       "-36336340043453651353467270113157312240"}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2910:                {new BigInteger("-9876543210987654321098765432100000"),     "%-6o",     "-36336340043453651353467270113157312240"}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2911:                {new BigInteger("-9876543210987654321098765432100000"),     "%08o",     "-36336340043453651353467270113157312240"}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2912:                {new BigInteger("-9876543210987654321098765432100000"),     "%#o",      "-036336340043453651353467270113157312240"}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2913:                {new BigInteger("-9876543210987654321098765432100000"),     "%0#11o",   "-036336340043453651353467270113157312240"}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:2914:                {new BigInteger("-9876543210987654321098765432100000"),     "%-#9o",    "-036336340043453651353467270113157312240"}, //$NON-NLS-2$
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:3840:                {Double.MAX_VALUE, "%,5f",        "179.769.313.486.231.570.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000.000,000000"},
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:3938:                {345.1234567f, "%a",         "0x1.591f9ap8"},
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:3939:                {345.1234567f, "%5a",        "0x1.591f9ap8"},
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:3940:                {345.1234567f, "%#+01.6a",   "+0x1.591f9ap8"},
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:4002:                {.00000001d, "%a",         "0x1.5798ee2308c3ap-27"},
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:4003:                {.00000001d, "%5a",        "0x1.5798ee2308c3ap-27"},
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:4004:                {.00000001d, "%- 12.0a",   " 0x1.5p-27  "},
+./dalvik/libcore/luni/src/test/java/tests/api/java/util/FormatterTest.java:4005:                {.00000001d, "%#+01.6a",   "+0x1.5798eep-27"},
+./dalvik/libcore/luni/src/test/java/tests/api/java/net/URLEncoderTest.java:74:                              "jar:file://a.jar !/b.c/\u1052",
+./dalvik/libcore/luni/src/test/java/tests/api/java/lang/reflect/FieldTest.java:46:    // JDK 1.5.
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/util/ArraysTest.java:474:     * @bug 1452542
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/util/ArraysTest.java:478:        notes = "Tests fix for Android bug 1452542",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/util/ArraysTest.java:490:     * @bug 1452542
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/util/ArraysTest.java:494:        notes = "Tests fix for Android bug 1452542",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/net/Inet6AddressTest.java:790:            addrName = "::FFFF:239.195.255.255";
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/net/Inet6AddressTest.java:862:                "::1", "0", /* jdk1.5 accepts 0 as valid */
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/net/Inet6AddressTest.java:1258:                "::1", "0", /* jdk1.5 accepts 0 as valid */
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/net/Inet4AddressTest.java:421:            addrName = "239.195.255.255"; // a multicast addr 1110
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:62:            0x911502f9, 0x92ba43b7, 0x9468d4a5, 0x961184e7, 0x97b5e621, 0x99635fa9, 0x9b0e1bca,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:66:            0xbf967699, 0xc13c1440, 0xc2eb1950, 0xc492efd2, 0xc637abc6, 0xc7e596b8, 0xc98f7e33,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:70:            0xee17edd8, 0xefbde94f, 0xf16d63a2, 0xf3145e45, 0xf4b975d7, 0xf667d34c, 0xf810e410,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:73:    private static final String expectedStringFor1_17eN38To38[] = { "-1.17549435E-38",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:74:            "-1.1754944E-37", "-1.17549435E-36", "-1.17549435E-35", "-1.1754944E-34",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:75:            "-1.17549435E-33", "-1.17549435E-32", "-1.1754944E-31", "-1.17549435E-30",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:76:            "-1.17549435E-29", "-1.1754944E-28", "-1.1754943E-27", "-1.17549435E-26",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:77:            "-1.1754943E-25", "-1.1754944E-24", "-1.1754943E-23", "-1.1754944E-22",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:78:            "-1.1754943E-21", "-1.1754943E-20", "-1.1754943E-19", "-1.1754944E-18",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:79:            "-1.1754944E-17", "-1.1754943E-16", "-1.1754943E-15", "-1.1754944E-14",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:80:            "-1.1754943E-13", "-1.1754944E-12", "-1.1754943E-11", "-1.1754943E-10",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:81:            "-1.1754944E-9", "-1.1754944E-8", "-1.1754943E-7", "-1.1754944E-6",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:82:            "-1.1754943E-5", "-1.1754943E-4", "-0.0011754944", "-0.011754943", "-0.117549434",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:83:            "-1.1754943", "-11.754944", "-117.54944", "-1175.4944", "-11754.943", "-117549.44",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:84:            "-1175494.4", "-1.1754944E7", "-1.17549432E8", "-1.1754944E9", "-1.17549435E10",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:85:            "-1.17549433E11", "-1.17549433E12", "-1.17549438E13", "-1.17549438E14",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:86:            "-1.1754943E15", "-1.17549432E16", "-1.17549432E17", "-1.17549434E18",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:87:            "-1.1754944E19", "-1.1754944E20", "-1.1754943E21", "-1.1754943E22",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:88:            "-1.1754944E23", "-1.17549434E24", "-1.1754943E25", "-1.1754943E26",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:89:            "-1.17549434E27", "-1.1754943E28", "-1.1754944E29", "-1.1754943E30",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:90:            "-1.1754943E31", "-1.1754944E32", "-1.1754943E33", "-1.1754944E34",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:91:            "-1.1754944E35", "-1.1754944E36", "-1.1754943E37", "-1.1754943E38" };
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:465:                "0.000000000000000000000000000000000000011754942807573642917278829910357665133228589927589904276829631184250030649651730385585324256680905818939208984375",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:466:                0x800000, "1.17549435E-38");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:468:                "0.00000000000000000000000000000000000001175494280757364291727882991035766513322858992758990427682963118425003064965173038558532425668090581893920898437499999f",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:469:                0x7fffff, "1.1754942E-38");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:509:            testString = "-1.1754943508222875e-" + i;
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:513:        doTestCompareRawBits("-1.1754943508222875e-3", rawBitsFor1_17eN38To38[38 - 3],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:515:        doTestCompareRawBits("-1.1754943508222875e-2", rawBitsFor1_17eN38To38[38 - 2],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:517:        doTestCompareRawBits("-1.1754943508222875e-1", rawBitsFor1_17eN38To38[38 - 1],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:519:        doTestCompareRawBits("-1.1754943508222875e-0", rawBitsFor1_17eN38To38[38 - 0],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:521:        doTestCompareRawBits("-1.1754943508222875e+1", rawBitsFor1_17eN38To38[38 + 1],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:523:        doTestCompareRawBits("-1.1754943508222875e+2", rawBitsFor1_17eN38To38[38 + 2],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:525:        doTestCompareRawBits("-1.1754943508222875e+3", rawBitsFor1_17eN38To38[38 + 3],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:527:        doTestCompareRawBits("-1.1754943508222875e+4", rawBitsFor1_17eN38To38[38 + 4],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:529:        doTestCompareRawBits("-1.1754943508222875e+5", rawBitsFor1_17eN38To38[38 + 5],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:531:        doTestCompareRawBits("-1.1754943508222875e+6", rawBitsFor1_17eN38To38[38 + 6],
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:536:            testString = "-1.1754943508222875e+" + i;
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/FloatTest.java:1009:        doTestCompareRawBits("123456790528.000000000000000f", 0x51e5f4c9, "1.2345679E11");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:50:        assertTrue(Double.longBitsToDouble( 4601023824101950163L) == 
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:129:        assertTrue(Double.longBitsToDouble( 4850236541654588678L) == StrictMath.tan( 1.7765241907548024E+269));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:565:        assertEquals("Should return 1.0145103074469635E60",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:566:                1.0145103074469635E60, StrictMath.expm1(138.16951162));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:647:        assertEquals("Should return 5413.7185", 5413.7185, StrictMath.hypot(
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:648:                -5413.7185, Double.MIN_VALUE));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:744:        assertEquals("Should return 14.661551142893833", 14.661551142893833,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:745:                StrictMath.log10(458723662312872.125782332587));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:748:        assertEquals("Should return 308.25471555991675", 308.25471555991675,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:750:        assertEquals("Should return -323.3062153431158", -323.3062153431158,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:769:                .log1p(-32.0482175)));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:780:        assertEquals("Should return -0.2941782295312541", -0.2941782295312541,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:1129:        assertEquals(-1.0, StrictMath.signum(-125874693.56), 0D);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:1161:        assertEquals(-1.0f, StrictMath.signum(-125874693.56f), 0f);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:1235:        assertEquals("Should return 5.115386441963859", 5.115386441963859,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:1417:                StrictMath.ulp(1153.0), 0D);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:1458:                .ulp(1153.0f), 0f);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:1473:        assertTrue(Double.longBitsToDouble(4601023824101950163L) == 
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/StrictMathTest.java:1485:        assertTrue(Double.longBitsToDouble(4850236541654588678L) == 
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:34:            0xedd832217788ccL, 0x122a71f54eab580L, 0x15750e72a2562e0L, 0x18d2520f4aebb98L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:43:            0x86673d831120ab2L, 0x89c10ce3d568d5fL, 0x8d18a80e656185bL, 0x905ed211feb9e72L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:49:            0xd6292816aa20cc9L, 0xd973721c54a8ffbL, 0xdcd04ea369d33faL, 0xe0223126222407cL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:53:            0x10b49e8fbf5eaf81L, 0x10e9c633af365b61L, 0x11201be04d81f91dL, 0x115422d860e27764L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:55:            0x125eb9ab6ad58f6dL, 0x1293340b22c579a4L, 0x12c8010deb76d80dL, 0x12fe015166548e11L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:57:            0x1406e4616a6262a3L, 0x143c9d79c4fafb4cL, 0x1471e26c1b1cdd0fL, 0x14a65b0721e41453L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:59:            0x15b10e52e10b52c2L, 0x15e551e7994e2772L, 0x161aa6617fa1b14fL, 0x1650a7fcefc50ed1L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:61:            0x17596a54535c0fbcL, 0x178fc4e9683313abL, 0x17c3db11e11fec4bL, 0x17f8d1d65967e75eL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:62:            0x182f064befc1e135L, 0x186363ef75d92cc1L, 0x18983ceb534f77f1L, 0x18ce4c26282355eeL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:67:            0x1c5505e8d75ad9b4L, 0x1c8a47630d319021L, 0x1cc06c9de83efa15L, 0x1cf487c5624eb89aL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:68:            0x1d29a9b6bae266c1L, 0x1d600a1234cd8038L, 0x1d940c96c200e046L, 0x1dc90fbc72811858L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:73:            0x215163cfac8e3896L, 0x2185bcc397b1c6bbL, 0x21bb2bf47d9e386aL, 0x21f0fb78ce82e342L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:80:            0x27218f2e3b00160fL, 0x2755f2f9c9c01b93L, 0x278b6fb83c302277L, 0x27c125d3259e158bL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:85:            0x2b47cc1b0f125135L, 0x2b7dbf21d2d6e583L, 0x2bb2977523c64f72L, 0x2be73d526cb7e34eL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:95:            0x3395dab72aac5a07L, 0x33cb5164f5577089L, 0x340112df1956a655L, 0x34355796dfac4febL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:99:            0x36e84361c80ae165L, 0x371e543a3a0d99beL, 0x3752f4a464488017L, 0x3787b1cd7d5aa01cL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:105:            0x3be411ef4aaf8504L, 0x3c19166b1d5b6646L, 0x3c4f5c05e4b23fd7L, 0x3c839983aeef67e6L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:106:            0x3cb87fe49aab41e0L, 0x3cee9fddc1561258L, 0x3d2323ea98d5cb77L, 0x3d57ece53f0b3e55L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:122:            0x47d691ca32818ed5L, 0x480c363cbf21f28aL, 0x4841a1e5f7753796L, 0x48760a5f7552857cL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:134:            0x51cee2a6014e402cL, 0x52034da7c0d0e81bL, 0x52382111b1052222L, 0x526e29561d466aabL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:138:            0x55212512533b7745L, 0x55556e56e80a5516L, 0x558ac9eca20cea5cL, 0x55c0be33e5481279L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:144:            0x5a1c5d1c1e7f26b3L, 0x5a51ba31930f7830L, 0x5a8628bdf7d3563cL, 0x5abbb2ed75c82bcaL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:145:            0x5af14fd4699d1b5fL, 0x5b25a3c984046236L, 0x5b5b0cbbe5057ac4L, 0x5b90e7f56f236cbaL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:149:            0x5e433851c529c8ceL, 0x5e78066636743b01L, 0x5eae07ffc41149c1L, 0x5ee2c4ffda8ace19L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:153:            0x619556a6e318fcf7L, 0x61caac509bdf3c34L, 0x6200abb2616b85a1L, 0x6234d69ef9c66709L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:157:            0x64e7b0c30d0da840L, 0x651d9cf3d0511251L, 0x655282186232ab72L, 0x6587229e7abf564fL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:162:            0x69100da47cce6004L, 0x6944110d9c01f805L, 0x6979155103027606L, 0x69af5aa543c31387L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:163:            0x69e398a74a59ec35L, 0x6a187ed11cf06742L, 0x6a4e9e85642c8112L, 0x6a8323135e9bd0abL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:170:            0x6fb3c98687c4e2afL, 0x6fe8bbe829b61b5bL, 0x701eeae23423a232L, 0x705352cd6096455fL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:173:            0x7231ff1190932a65L, 0x72667ed5f4b7f4feL, 0x729c1e8b71e5f23dL, 0x72d19317272fb766L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:176:            0x74b05e1ac0175b92L, 0x74e475a1701d3277L, 0x75199309cc247f15L, 0x754ff7cc3f2d9edaL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:183:            0x7a8086eca02201a9L, 0x7ab4a8a7c82a8213L, 0x7ae9d2d1ba352298L, 0x7b2023c31461359fL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:809:        assertEquals("Returned incorrect value", 0.125, actual, 0.0D);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:892:                0x4ac6516501234568L,                0x4b77617601234568L,                0x4c28718701234568L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:900:                0x5b60a50a4048d15aL,                0x5c1101100048d15aL,                0x5cc145144048d15aL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:905:                0x65b651650048d15aL,                0x666815814048d15aL,                0x671859858048d15aL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:959:                0x3626516501234568L,                0x3577617601234568L,                0x34c8718701234568L,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:967:                0x25c0a50a4048d15aL,                0x251101100048d15aL,                0x246145144048d15aL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:972:                0x1b7651650048d15aL,                0x1ac815814048d15aL,                0x1a1859858048d15aL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:974:                0x175981980048d15aL,                0x16a9c59c4048d15aL,                0x15fa09a08048d15aL,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:1446:        test_toString(d, "-3.3846065602060736E125");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:1448:        test_toString(d, "-3.384606560206074E125");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:1451:        test_toString(d, "-3.3846065602060766E125");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:1453:        test_toString(d, "-3.384606560206077E125");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:1456:        test_toString(d, "-3.3846065602060796E125");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:1458:        test_toString(d, "-3.38460656020608E125");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:1461:        test_toString(d, "-3.3846065602060826E125");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/DoubleTest.java:1463:        test_toString(d, "-3.384606560206083E125");
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:425:        assertEquals("Should return 1.0145103074469635E60",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:426:                1.0145103074469635E60, Math.expm1(138.16951162), 0D);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:500:        assertEquals("Should return 5413.7185", 5413.7185, Math.hypot(
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:501:                -5413.7185, Double.MIN_VALUE), 0D);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:575:        assertEquals(14.661551142893833, Math.log10(458723662312872.125782332587));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:577:        assertEquals(308.25471555991675, Math.log10(Double.MAX_VALUE));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:578:        assertEquals(-323.3062153431158, Math.log10(Double.MIN_VALUE));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:593:        assertTrue("Should return NaN", Double.isNaN(Math.log1p(-32.0482175)));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:603:        assertEquals("Should return -0.2941782295312541", -0.2941782295312541,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:943:        assertEquals(-1.0, Math.signum(-125874693.56), 0D);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:974:        assertEquals(-1.0f, Math.signum(-125874693.56f), 0f);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:1042:        assertEquals("Should return 5.115386441963859", 5.115386441963859, Math
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:1084:        assertEquals("Incorrect answer", 1.5574077246549023, Math.tan(1), 0D);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:1226:                .ulp(1153.0), 0D);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/MathTest.java:1267:                .ulp(1153.0f), 0f);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:1133:        assertTrue(Character.getType(0x01C5) == Character.TITLECASE_LETTER);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:1149:        assertTrue(Character.getType(0x1D165) == Character.COMBINING_SPACING_MARK);
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:1499:        assertTrue(Character.isJavaIdentifierPart(0x01C5));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:1575:        assertTrue(Character.isJavaIdentifierStart(0x01C5));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:1746:        assertFalse(Character.isLowerCase(0x1D504));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:1813:        char[] tChars = { (char) 0x01c5, (char) 0x01c8, (char) 0x01cb,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:1848:        int[] titleCaseCharacters = { 0x01c5, 0x01c8, 0x01cb, 0x01f2, 0x1f88,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:1921:        assertTrue(Character.isUnicodeIdentifierPart(0x1D165));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:2010:        assertTrue(Character.isUpperCase(0x1D504));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/CharacterTest.java:2127:        assertEquals(0x1D504, Character.toLowerCase(0x1D504));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:338:            12, 1, 0, 6, 60, 105, 110, 105, 116, 62,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:340:            111, 100, 101, 1, 0, 15, 76, 105, 110, 101,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:343:            70, 105, 108, 101, 1, 0, 14, 84, 101, 115,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:344:            116, 67, 108, 97, 115, 115, 46, 106, 97, 118,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:346:            101, 115, 116, 67, 108, 97, 115, 115, 1, 0,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1148:            104, 97, 114, 109, 111, 110, 121, 47, 108, 117, 110, 105, 47, 116,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1149:            101, 115, 116, 115, 47, 106, 97, 118, 97, 47, 108, 97, 110, 103, 47,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1151:            79, 98, 106, 101, 99, 116, 1, 0, 6, 60, 105, 110, 105, 116, 62, 1,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1153:            5, 0, 6, 1, 0, 15, 76, 105, 110, 101, 78, 117, 109, 98, 101, 114,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1155:            105, 97, 98, 108, 101, 84, 97, 98, 108, 101, 1, 0, 4, 116, 104, 105,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1156:            115, 1, 0, 43, 76, 111, 114, 103, 47, 97, 112, 97, 99, 104, 101, 47,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1157:            104, 97, 114, 109, 111, 110, 121, 47, 108, 117, 110, 105, 47, 116,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1158:            101, 115, 116, 115, 47, 106, 97, 118, 97, 47, 108, 97, 110, 103, 47,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1159:            65, 59, 1, 0, 10, 83, 111, 117, 114, 99, 101, 70, 105, 108, 101, 1,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1160:            0, 20, 67, 108, 97, 115, 115, 76, 111, 97, 100, 101, 114, 84, 101,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/ClassLoaderTest.java:1161:            115, 116, 46, 106, 97, 118, 97, 0, 32, 0, 1, 0, 3, 0, 0, 0, 0, 0, 1,
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/String2Test.java:1386:        String s = "a\u00df\u1f56";
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/String2Test.java:1718:                { "213567", "12324567", "1234567", "213213567",
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/String2Test.java:1719:                        "21312312312567", "444444567" },
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/Character_UnicodeBlockTest.java:119:        assertEquals(Character.UnicodeBlock.BUHID, Character.UnicodeBlock.of((char)0x175f));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/Character_UnicodeBlockTest.java:130:        assertEquals(Character.UnicodeBlock.TAI_LE, Character.UnicodeBlock.of((char)0x1950));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/Character_UnicodeBlockTest.java:363:        assertEquals(Character.UnicodeBlock.BUHID, Character.UnicodeBlock.of(0x175f));
+./dalvik/libcore/luni/src/test/java/org/apache/harmony/luni/tests/java/lang/Character_UnicodeBlockTest.java:374:        assertEquals(Character.UnicodeBlock.TAI_LE, Character.UnicodeBlock.of(0x1950));
+Binary file ./dalvik/libcore/luni/src/test/resources/org/apache/harmony/luni/tests/key_store.bks matches
+./dalvik/libcore/luni/src/main/java/java/io/OptionalDataException.java:31:    private static final long serialVersionUID = -8011121865681257820L;
+./dalvik/libcore/luni/src/main/java/java/io/InvalidClassException.java:36:    private static final long serialVersionUID = -4333316296251054416L;
+./dalvik/libcore/luni/src/main/java/java/io/StreamCorruptedException.java:31:    private static final long serialVersionUID = 8983558202217591746L;
+./dalvik/libcore/luni/src/main/java/java/io/IOException.java:28:    private static final long serialVersionUID = 7818375828146090155L;
+./dalvik/libcore/luni/src/main/java/java/util/Formatter.java:224:format("%1.5f", 123.456f);
+./dalvik/libcore/luni/src/main/java/java/util/Formatter.java:240:format("%1.5E", 123.456f);
+./dalvik/libcore/luni/src/main/java/java/util/Formatter.java:523: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:137:        private static final long serialVersionUID = 6428348081105594320L;
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:1214:            private static final long serialVersionUID = 7854390611657943733L;
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:1430:        private static final long serialVersionUID = -4929149591599911165L;
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:1834:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:2461:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:2485:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:2497:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:2509:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:3041:        private static final long serialVersionUID = 1638200125423088369L;
+./dalvik/libcore/luni/src/main/java/java/util/Collections.java:3519:        private static final long serialVersionUID = 1599911165492914959L;
+./dalvik/libcore/luni/src/main/java/java/util/GregorianCalendar.java:186:    private static final long serialVersionUID = -8125100834729963327L;
+./dalvik/libcore/luni/src/main/java/java/util/MissingFormatArgumentException.java:29:    private static final long serialVersionUID = 19190115L;
+./dalvik/libcore/luni/src/main/java/java/util/Properties.java:66:    private static final long serialVersionUID = 4112578634029874840L;
+./dalvik/libcore/luni/src/main/java/java/util/Scanner.java:453:     * {@code findWithinHorizon(Pattern.compile("\\p&#123;Digit&#125;&#123;3&#125;"), 2)}
+./dalvik/libcore/luni/src/main/java/java/util/Scanner.java:455:     * {@code findWithinHorizon(Pattern.compile("\\p&#123;Digit&#125;&#123;3&#125;"), 3)}
+./dalvik/libcore/luni/src/main/java/java/util/UUID.java:39: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:1921:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:1951:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:1981:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:2011:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:2041:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:2071:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:2101:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:2131:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:2161:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Arrays.java:2196:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Stack.java:27:    private static final long serialVersionUID = 1224463164541339165L;
+./dalvik/libcore/luni/src/main/java/java/util/IllegalFormatConversionException.java:27: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/util/Date.java:718:        // at 1655us versus 195us...
+./dalvik/libcore/luni/src/main/java/java/util/MissingFormatWidthException.java:26:    private static final long serialVersionUID = 15560123L;
+./dalvik/libcore/luni/src/main/java/java/net/Inet4Address.java:34:    private static final long serialVersionUID = 3286316764910316507L;
+./dalvik/libcore/luni/src/main/java/java/net/Inet4Address.java:208:     * 239.192.0.0 to 239.195.255.255 Hence masks of 11101111 11000000 to
+./dalvik/libcore/luni/src/main/java/java/net/InetAddress.java:73:    private static final long serialVersionUID = 3286316764910316507L;
+./dalvik/libcore/luni/src/main/java/java/lang/UnsupportedOperationException.java:53:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/UnsupportedOperationException.java:65:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/IllegalStateException.java:55:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/IllegalStateException.java:67:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:572:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:601:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:1688:                } else if (ch >= 0x1f50 && ch <= 0x1ffc) {
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:1689:                    index = "\u000b\u0000\f\u0000\r\u0000\u000e\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&'()*+,-./0123456789:;<=>\u0000\u0000?@A\u0000BC\u0000\u0000\u0000\u0000D\u0000\u0000\u0000\u0000\u0000EFG\u0000HI\u0000\u0000\u0000\u0000J\u0000\u0000\u0000\u0000\u0000KL\u0000\u0000MN\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000OPQ\u0000RS\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000TUV\u0000WX\u0000\u0000\u0000\u0000Y".value[ch - 0x1f50]; //$NON-NLS-1$
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:1951:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:2100:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:2121:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:2145:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:2163:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:2185:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:2216:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/String.java:2245:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/TypeNotPresentException.java:25: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/TypeNotPresentException.java:28:    private static final long serialVersionUID = -5101214195716534496L;
+./dalvik/libcore/luni/src/main/java/java/lang/CloneNotSupportedException.java:28:    private static final long serialVersionUID = 5195511250079656443L;
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:389:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:397:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:405:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:413:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:420:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:427:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:434:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:441:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:448:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:456:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:663:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:825:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:831:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:837:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:839:        public static final UnicodeBlock BUHID = new UnicodeBlock("BUHID", 0x1740, 0x175f);
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:843:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:861:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:867:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:869:        public static final UnicodeBlock TAI_LE = new UnicodeBlock("TAI_LE", 0x1950, 0x197f);
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:873:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:879:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1001:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1007:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1019:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1025:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1031:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1103:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1127:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1197:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1245:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1251:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1257:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1263:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1269:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1275:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1281:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1287:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1293:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1299:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1305:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1311:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1317:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1323:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1329:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1335:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1341:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1347:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1353:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1394:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1451:         * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1524:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1547:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1561:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1577:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1593:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1611:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1630:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1649:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1679:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1721:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1766:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1804:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1846:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1893:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1936:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:1979:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:2013:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:2061:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:2110:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Character.java:2194:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Short.java:49:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Short.java:285:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Short.java:301:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/EnumConstantNotPresentException.java:24: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/SecurityException.java:54:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/SecurityException.java:66:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Override.java:29: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/ClassFormatError.java:26:    private static final long serialVersionUID = -8420114879011949195L;
+./dalvik/libcore/luni/src/main/java/java/lang/NoSuchFieldError.java:28:    private static final long serialVersionUID = -3456430195886129035L;
+./dalvik/libcore/luni/src/main/java/java/lang/Double.java:80:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Double.java:381:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Double.java:393:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/CaseMapper.java:22: * Performs case operations as described by http://unicode.org/reports/tr21/tr21-5.html.
+./dalvik/libcore/luni/src/main/java/java/lang/Boolean.java:121:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Boolean.java:176:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StringBuffer.java:95:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StringBuffer.java:288:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StringBuffer.java:316:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StringBuffer.java:334:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StringBuffer.java:616:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StringBuffer.java:644:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StackOverflowError.java:28:    private static final long serialVersionUID = 8609175038441759607L;
+./dalvik/libcore/luni/src/main/java/java/lang/InternalError.java:26:    private static final long serialVersionUID = -9062593416125562365L;
+./dalvik/libcore/luni/src/main/java/java/lang/Byte.java:27:    private static final long serialVersionUID = -7183698231559129828L;
+./dalvik/libcore/luni/src/main/java/java/lang/Byte.java:48:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Byte.java:289:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/SuppressWarnings.java:33: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/ProcessBuilder.java:28: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/AbstractMethodError.java:28:    private static final long serialVersionUID = -1654391082989018462L;
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:59:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:716:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:737:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:750:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:784:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:804:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:825:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:841:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:854:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:869:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:889:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Integer.java:905:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/TypeVariable.java:27: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/GenericDeclaration.java:22: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/GenericArrayType.java:24: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/AnnotatedElement.java:25: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/ParameterizedType.java:24: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/WildcardType.java:26: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/Type.java:22: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/GenericSignatureFormatError.java:24: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/reflect/MalformedParameterizedTypeException.java:24: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StringBuilder.java:42: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/StringBuilder.java:660:         * in the RI javac (at least in 1.5.0_06) that will generate a
+./dalvik/libcore/luni/src/main/java/java/lang/IllegalArgumentException.java:55:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/IllegalArgumentException.java:67:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/AbstractStringBuilder.java:32: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/AbstractStringBuilder.java:821:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/AbstractStringBuilder.java:843:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/AbstractStringBuilder.java:863:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/AbstractStringBuilder.java:887:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/AbstractStringBuilder.java:914:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:68:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:694:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:716:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:729:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:774:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:789:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:828:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:844:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:857:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:873:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:894:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Long.java:914:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Deprecated.java:28: * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/ThreadLocal.java:106:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/ClassCircularityError.java:30:    private static final long serialVersionUID = 1054362542914539689L;
+./dalvik/libcore/luni/src/main/java/java/lang/OutOfMemoryError.java:27:    private static final long serialVersionUID = 8228564086184010517L;
+./dalvik/libcore/luni/src/main/java/java/lang/Float.java:28:    private static final long serialVersionUID = -2671257302660747028L;
+./dalvik/libcore/luni/src/main/java/java/lang/Float.java:77:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Float.java:387:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Float.java:399:     * @since 1.5
+./dalvik/libcore/luni/src/main/java/java/lang/Iterable.java:25: * @since 1.5
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/ExternalMessages.properties:198:K0185=The alias already exists for a key entry.
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/ExternalMessages.properties:204:K0195=The existing public key and the one contained in the certificate do not match.
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/ExternalMessages.properties:209:K01a5=Illegal shutdown hook\: {0}
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/OIDDatabase.java:47:        // DBEntry oid = new DBEntry("1.2.840.113549.1.1.2");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/OIDDatabase.java:53:        oid = new DBEntry("1.2.840.113549.1.1.4");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/OIDDatabase.java:58:        oid = new DBEntry("1.2.840.113549.1.1.5");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/OIDDatabase.java:77:        oid = new DBEntry("1.2.840.113549.2.5");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/OIDDatabase.java:84:        oid = new DBEntry("1.2.840.113549.1.1.1");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:36:        historicalNames.put("IBM01145", "Cp1145");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:93:        historicalNames.put("windows-1250", "Cp1250");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:94:        historicalNames.put("windows-1251", "Cp1251");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:95:        historicalNames.put("windows-1252", "Cp1252");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:96:        historicalNames.put("windows-1253", "Cp1253");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:97:        historicalNames.put("windows-1254", "Cp1254");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:98:        historicalNames.put("windows-1255", "Cp1255");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:99:        historicalNames.put("windows-1256", "Cp1256");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:100:        historicalNames.put("windows-1257", "Cp1257");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/util/HistoricalNamesUtil.java:101:        historicalNames.put("windows-1258", "Cp1258");
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/internal/net/www/protocol/ftp/FtpURLConnection.java:52:    private static final int FTP_DATAOPEN = 125;
+./dalvik/libcore/luni/src/main/java/org/apache/harmony/luni/platform/OSNetworkSystem.java:212:        // Wallpaper fix for http://b/1851257. This  is a layering violation,
+./dalvik/libcore/luni/src/main/native/org_apache_harmony_luni_util_fltparse.c:272:      if (dexp <= -155)
+./dalvik/libcore/luni/src/main/native/org_apache_harmony_luni_util_fltparse.c:278:      if ((dexp <= -127) && (dexp > -155))
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1143:        validEPKIEncodings.put("1.2.840.113549.1.3.1",
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1155:        validAPEncodings.put("1.2.840.113549.1.3.1", dhParamsEncoded);
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1173:            { "1.2.840.113549.1.1.1", "RSA" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1174:            { "1.2.840.113549.1.3.1", "DiffieHellman" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1175:            { "1.2.840.113549.1.5.3", "pbeWithMD5AndDES-CBC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1176:            { "1.2.840.113549.1.12.1.3", "pbeWithSHAAnd3-KeyTripleDES-CBC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1177:            //            {"1.2.840.113549.1.12.1.6", "pbeWithSHAAnd40BitRC2-CBC"},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1178:            { "1.2.840.113549.3.2", "RC2-CBC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1179:            { "1.2.840.113549.3.3", "RC2-EBC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1180:            { "1.2.840.113549.3.4", "RC4" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1181:            { "1.2.840.113549.3.5", "RC4WithMAC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1182:            { "1.2.840.113549.3.6", "DESx-CBC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1183:            { "1.2.840.113549.3.7", "TripleDES-CBC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1184:            { "1.2.840.113549.3.8", "rc5CBC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1185:            { "1.2.840.113549.3.9", "RC5-CBC" },
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/support/EncryptedPrivateKeyInfoData.java:1186:            { "1.2.840.113549.3.10", "DESCDMF" }, };
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/spec/DESedeKeySpecTest.java:212:                         (byte) 145, (byte) 146, (byte) 148, (byte) 151,
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/spec/DESedeKeySpecTest.java:213:                         (byte) 152, (byte) 155, (byte) 157, (byte) 158,
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:89:            //            {"2.16.840.1.101.3.4.1.5", null},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:139:            // {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-5(5)
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:144:            // {iso(1) member-body(2) us(840) nortelnetworks(113533) entrust(7)
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:148:            // {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-12(12)
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:151:            // {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-12(12)
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:160:            //            {"1.2.840.113549.1.3.1", null},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:170:            //            {"1.2.840.113549.1.12.1.1",null},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:171:            //            {"1.2.840.113549.1.12.1.2",null},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:172:            //{ "1.2.840.113549.1.12.1.3", null, "PBEWithSHA1AndDESede"},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:174:    //            {"1.2.840.113549.1.12.1.4",null},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:175:    //            {"1.2.840.113549.1.12.1.5",null},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:176:    //            {"1.2.840.113549.1.12.1.6",null},
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:196:    //            {"RSA",null}, // 1.2.840.113549.1.1.1
+./dalvik/libcore/crypto/src/test/java/org/apache/harmony/crypto/tests/javax/crypto/EncryptedPrivateKeyInfoTest.java:197:    //            {"1.2.840.113549.1.1.1", null},
+./dalvik/libcore/crypto/src/main/java/javax/crypto/NoSuchPaddingException.java:31:    private static final long serialVersionUID = -4572885201200175466L;
+./dalvik/libcore/crypto/src/main/java/javax/crypto/IllegalBlockSizeException.java:31:    private static final long serialVersionUID = -1965144811953540392L;
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/nodehaschildnodes.java:39:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/documentinvalidcharacterexceptioncreatepi1.java:34:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-135944439">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-135944439</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/documentinvalidcharacterexceptioncreatepi1.java:35:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#xpointer(id('ID-135944439')/raises/exception[@name='DOMException']/descr/p[substring-before(.,':')='INVALID_CHARACTER_ERR'])">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#xpointer(id('ID-135944439')/raises/exception[@name='DOMException']/descr/p[substring-before(.,':')='INVALID_CHARACTER_ERR'])</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_nodehaschildnodesfalse.java:37:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_nodehaschildnodesfalse.java:38:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/nodechildnodesempty.java:40:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_nodechildnodesappendchild.java:42:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/textparseintolistofelements.java:39:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_nodechildnodes.java:39:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_attrhaschildnodes.java:34:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_attrchildnodes1.java:35:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/nodechildnodesappendchild.java:35:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/documentcreateprocessinginstruction.java:45:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-135944439">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-135944439</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_nodehaschildnodes.java:38:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_textparseintolistofelements.java:38:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/nodehaschildnodesfalse.java:39:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/nodehaschildnodesfalse.java:40:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-810594187</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_nodechildnodesempty.java:39:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/hc_attrchildnodes2.java:34:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/documentinvalidcharacterexceptioncreatepi.java:37:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-135944439">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-135944439</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/documentinvalidcharacterexceptioncreatepi.java:38:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#xpointer(id('ID-135944439')/raises/exception[@name='DOMException']/descr/p[substring-before(.,':')='INVALID_CHARACTER_ERR'])">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#xpointer(id('ID-135944439')/raises/exception[@name='DOMException']/descr/p[substring-before(.,':')='INVALID_CHARACTER_ERR'])</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level1/core/nodechildnodes.java:34:* @see <a href="http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987">http://www.w3.org/TR/1998/REC-DOM-Level-1-19981001/level-one-core#ID-1451460987</a>
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level2/core/nodenormalize01.java:157:      assertSize("nodeNormalize01_5Bef", 3, elementList);
+./dalvik/libcore/dom/src/test/java/org/w3c/domts/level2/core/nodenormalize01.java:172:      assertSize("nodeNormalize01_5Aft", 2, elementList);
+./dalvik/libcore/support/src/test/java/tests/support/Support_SimpleDateFormat.java:87:        t_FormatWithField(14, format, date, null, Field.WEEK_OF_MONTH, 135, 136);
+./dalvik/libcore/support/src/test/java/tests/support/Support_SimpleDateFormat.java:90:        t_FormatWithField(17, format, date, null, Field.TIME_ZONE, 155, 158);
+./dalvik/libcore/support/src/test/java/tests/support/Support_SimpleDateFormat.java:243:        v.add(new FieldContainer(102, 105, Field.DAY_OF_WEEK));
+./dalvik/libcore/support/src/test/java/tests/support/Support_SimpleDateFormat.java:248:        v.add(new FieldContainer(125, 126, Field.DAY_OF_WEEK_IN_MONTH));
+./dalvik/libcore/support/src/test/java/tests/support/Support_SimpleDateFormat.java:254:        v.add(new FieldContainer(143, 145, Field.AM_PM));
+Binary file ./dalvik/libcore/support/src/test/java/tests/resources/Package/hyts_pq.jar matches
+./dalvik/libcore/support/src/test/java/org/apache/harmony/xnet/tests/support/X509KeyManagerImpl.java:53:            + "5xQaa5A6wjhMlLOjbh27zyscrorMJ1O5FBOWnEHcRv6xqQIDAQABoy8wLTAdBgNV\n"
+./dalvik/libcore/support/src/test/java/org/apache/harmony/security/tests/support/MyPermissionCollection.java:27:    private static final long serialVersionUID = -8462474212761656528L;
+./dalvik/libcore/support/src/test/java/org/apache/harmony/security/tests/support/cert/TestUtils.java:565:                    71:53:81:78:e1:48:94:fa:16:61:93:eb:a0:ee:62:
+./dalvik/libcore/support/src/test/java/org/apache/harmony/security/tests/support/cert/TestUtils.java:674:        7b:48:e1:98:d1:65:7a:eb:bf:b0:5c:cd:c2:eb:31:5e:b6:e9:
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:172:    static abstract class windows_1250 extends _Abstract {
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:177:    static abstract class windows_1251 extends _Abstract {
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:182:    static abstract class windows_1252 extends _Abstract {
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:187:    static abstract class windows_1253 extends _Abstract {
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:192:    static abstract class windows_1254 extends _Abstract {
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:197:    static abstract class windows_1255 extends _Abstract {
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:202:    static abstract class windows_1256 extends _Abstract {
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:207:    static abstract class windows_1257 extends _Abstract {
+./dalvik/libcore/support/src/test/java/targets/Charsets.java:212:    static abstract class windows_1258 extends _Abstract {
+./dalvik/libcore/sql/src/test/java/tests/SQLite/StmtTest.java:82:        + "'1221-09-22 10:11:55', 1, 2, 3, 4,"
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetGetterTests.java:89:        "1221-09-22 10:11:55","1","2","3","4","Test text message tiny",
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetGetterTests.java:202:                    + "'1221-09-22 10:11:55', 1, 2, 3, 4,"
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetGetterTests.java:1360:        "1221-09-22 10:11:55","1","2","3","4");
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetGetterTests.java:1444:        // values "12:35:45", "2007-10-09 14:28:02.0", "1221-09-22 10:11:55"
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetGetterTests.java:1524:        // "1221-09-22 10:11:55");
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetGetterTests.java:1611:        // "1221-09-22 10:11:55");
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetGetterTests.java:1694:        // "1221-09-22 10:11:55");
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetMetaDataTest.java:372:        String insert = "insert into DecimalNumbers values (1.5, 20.55, 30.666, 100000);";
+./dalvik/libcore/sql/src/test/java/tests/sql/ResultSetMetaDataTest.java:443:        String insert = "insert into DecimalNumbers values (1.5, 20.55, 30.666);";
+./dalvik/libcore/sql/src/test/java/tests/sql/PreparedStatementTest.java:89:                    + "'1221-09-22 10:11:55', 1, 2, 3, 4,"
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/TimestampTest.java:161:        int[][] valid = { { 99, 2, 14, 17, 52, 3, 213577212 }, // 0 valid
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/TimestampTest.java:801:            // It throws ClassCastException in JDK 1.5.0_06 but in 1.5.0_07 it
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/DataTruncationTest.java:46:        int[] init1 = { -2147483648, 2147483647, 0, 329751502, 318587557,
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/DataTruncationTest.java:53:                -105552912, -85923935 };
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/DataTruncationTest.java:202:        int[] init4 = { -2147483648, 2147483647, 0, 1134512579, 533874007,
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/DataTruncationTest.java:361:                1123419516, -429606389 };
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/DataTruncationTest.java:437:                -217347438, 1357818664 };
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/DataTruncationTest.java:438:        int[] init5 = { -2147483648, 2147483647, 0, -1647009002, -717544563,
+./dalvik/libcore/sql/src/test/java/org/apache/harmony/sql/tests/java/sql/SQLExceptionTest.java:38:    static long theFixedSUID = 2135244094396331484L;
+./dalvik/libcore/sql/src/main/java/SQLite/JDBCDriver.java:31:        } else if (jvers.startsWith("1.5")) {
+./dalvik/libcore/sql/src/main/java/java/sql/SQLException.java:46:    private static final long serialVersionUID = 2135244094396331484L;
+./dalvik/libcore/sql/src/main/java/java/sql/BatchUpdateException.java:43:    private static final long serialVersionUID = 5977529877145521757L;
+./dalvik/libcore/sql/src/main/java/java/sql/Date.java:37:    private static final long serialVersionUID = 1511598038487230103L;
+./dalvik/libcore/xml/src/test/java/tests/xml/NormalizeTest.java:51: * test assumes the same set of parameters as the RI version 1.5. Perfectly
+./dalvik/libcore/xml/src/test/java/tests/org/w3c/dom/NodeNormalize.java:187:        assertEquals("nodeNormalize01_5Bef", 3, elementList.getLength());
+./dalvik/libcore/xml/src/test/java/tests/org/w3c/dom/NodeNormalize.java:202:        assertEquals("nodeNormalize01_5Aft", 2, elementList.getLength());
+./dalvik/libcore/xml/src/test/resources/recipe.xml:10:    <ingredient name="beef cube steak" amount="1.5" unit="pound"/>
+./dalvik/libcore/xml/src/test/resources/recipe.xml:13:        Preheat oven to 350 degrees F (175 degr
