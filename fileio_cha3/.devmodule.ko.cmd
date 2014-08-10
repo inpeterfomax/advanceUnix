@@ -1,1 +1,0 @@
-cmd_/home/gupingchang/samba/auep/chap3/devmodule.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-2.6.35-22-generic/scripts/module-common.lds --build-id -o /home/gupingchang/samba/auep/chap3/devmodule.ko /home/gupingchang/samba/auep/chap3/devmodule.o /home/gupingchang/samba/auep/chap3/devmodule.mod.o

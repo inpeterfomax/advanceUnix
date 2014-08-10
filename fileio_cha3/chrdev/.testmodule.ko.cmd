@@ -1,1 +1,0 @@
-cmd_/opt/advancedUnixProgramme/FILEIO/chrdev/testmodule.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-2.6.35-22-generic/scripts/module-common.lds --build-id -o /opt/advancedUnixProgramme/FILEIO/chrdev/testmodule.ko /opt/advancedUnixProgramme/FILEIO/chrdev/testmodule.o /opt/advancedUnixProgramme/FILEIO/chrdev/testmodule.mod.o
