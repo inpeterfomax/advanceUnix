@@ -30,13 +30,15 @@ int main(int argc,char*argv[])
 	if( bind( fd,(struct sockaddr *)&un,size) == -1){   //bind the fd with the address.
 		perror("bind failed\n");
 		exit(0);
+	}else{
+		printf("server bind done\n");
 	}
 	
 	if( listen(fd,5) == -1){			//wait for the connect require.
 		perror("listen failed\n");
 		exit(0);
 	}
-
+#if 0
 	char tmp, buff[1024];
 	int ret,clifd,i;
 	int len = sizeof(struct sockaddr_un);
@@ -56,7 +58,7 @@ int main(int argc,char*argv[])
 			FD_SET(0,&fdset);
 			FD_SET(clifd,&fdset); 
 
-			ret = select(clifd+1,&fdset,NULL,NULL,NULL);
+			ret = select(clifd+1,&fdset,NULL,NULL,NULL);	//wait until one fd could be used.
 			if(ret < 0){
 				perror("select failed!\n");
 				exit(-1);
@@ -76,5 +78,6 @@ int main(int argc,char*argv[])
 				}
 			}
 		}
+#endif
 	return 0;
 }

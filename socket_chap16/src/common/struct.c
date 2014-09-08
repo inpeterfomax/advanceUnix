@@ -9,10 +9,11 @@ struct _student{
 		char chinese;
 		char math;
 	}std_class;
-	int link
+	int link;
 };
 
-int main(){
+int main(int argc,char *argv[]){
+
 	struct _student stu = {
 		.name="peter.gu",
 		.number = 10,
@@ -23,17 +24,15 @@ int main(){
 		},
 		.link=10,
 	};
-	//struct _student stu = {"peter.gu",10,{1,2,3},10};
-	printf("name %s,number %d,english %d,chinese %d,math %d,link %d",stu.name,stu.number,stu.std_class.english,stu.std_class.chinese,stu.std_class.math,stu.link);
+
+	printf("name %s,number %d,english %d,chinese %d,math %d,link %d",
+		stu.name,stu.number,stu.std_class.english,stu.std_class.chinese,stu.std_class.math,stu.link);
 	printf("\n");
 
 	struct _student sta = {0};
-	printf("name %s number %d\n",sta.name,sta.number);
+		printf("name %s number %d\n",sta.name,sta.number);
 	struct _student stb = {NULL};
-	printf("name %s number %d\n",stb.name,stb.number);
+		printf("name %s number %d\n",stb.name,stb.number);
 
 	return 0;
 }
-
-
-

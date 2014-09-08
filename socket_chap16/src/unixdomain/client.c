@@ -21,7 +21,7 @@ int main(int argc , char *argv[])
 	
 	memset(&un,0,sizeof(struct sockaddr_un));
 	un.sun_family = AF_UNIX;
-	sprintf(un.sun_path,"%s%d","client",getpid());
+	sprintf(un.sun_path,"%s-%d","client",getpid());
 	unlink(un.sun_path); //in case this file has been there ;for it must be created by the bind;
 	
 	if( ( fd = socket(AF_UNIX,SOCK_STREAM,0)) < 0){
@@ -31,6 +31,7 @@ int main(int argc , char *argv[])
 	/*
 		bind ; use  the common file as the addr.un_addr;
 	*/
+
 	memset(&server,0,sizeof(struct sockaddr_un));
 	server.sun_family = AF_UNIX;
 	strcpy(server.sun_path,argv[1]); 			//this path 

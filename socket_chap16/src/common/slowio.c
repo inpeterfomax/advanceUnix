@@ -1,16 +1,20 @@
-#include"./../include/head.h"
+/*time:
+ * date:
+ * dis:*/
+
+#include"../include/head.h"
 
 char buf[500000];
 
 static void set_fl(int fd, int flags) /* flags are file status flags to turn on */
 {
-    int        val;
+    int   val;
 
     if ( (val = fcntl(fd, F_GETFL, 0)) < 0)
-        {
-            printf("fcntl F_GETFL error");
-            exit(1);
-        }
+    {
+          printf("fcntl F_GETFL error");
+          exit(1);
+    }
 
     val |= flags;        /* turn on flags */
 
@@ -40,8 +44,6 @@ void clr_fl(int fd, int flags)
     return;
 }
 
-
-
 int main(void)
 {
 	int ntowrite, nwrite;
@@ -50,7 +52,7 @@ int main(void)
 	ntowrite = read(STDIN_FILENO,buf,sizeof(buf));
 	fprintf(stderr,"read %d bytes\n",ntowrite);
 
-	set_fl(STDOUT_FILENO,O_NONBLOCK);
+	set_fl(STDOUT_FILENO,O_NONBLOCK);//STDOUT_FILENO,STDIN_FILENO
 	ptr = buf;
 	
 	while(ntowrite > 0)
@@ -64,8 +66,7 @@ int main(void)
 			ntowrite -= nwrite;
 		}
 	}
+
 	clr_fl(STDOUT_FILENO,O_NONBLOCK);
 	exit(0);
 }
-
-
