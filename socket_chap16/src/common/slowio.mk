@@ -6,20 +6,15 @@ TOPDIR := $(HOME)/ws/advanceUnix/
 BIN := $(TOPDIR)/socket_chap16/bin 
 LIB := $(TOPDIR)/socket_chap16/lib
 
-OBJS := struct.o slowio.o
+OBJS := slowio.o
 LIBS := -lm -lpthread
 INCL := -I -I./../include/
 CFLAGS := -Wall
+CC:=gcc
 
-#struct:$(OBJS)
-#	gcc -o $@ $(OBJS) $(LIBS) $(INCL)   #$< :what is it ?
-
-struct:struct.o
-	gcc -o $< $@
-slowio:slowio.o
-	gcc -o $< $@
+slowio:$(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(LIBS) $(INCL) $<
 
 clean:
 	rm -rf $(OBJS)
-	rm -rf *.out 
-	rm -rf struct slowio
+	rm -rf *.out

@@ -1,12 +1,4 @@
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <stddef.h> 
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include <sys/un.h>
+#include "head.h"
 
 #define MAXLISTEN 5
 
@@ -14,12 +6,12 @@ int main(int argc,char*argv[])
 {
 	int fd,size;
 	struct sockaddr_un un;
-
-	size = offsetof( struct sockaddr_un,sun_path) + strlen(un.sun_path); //size equals size!
-	memset(&un,0,sizeof(struct sockaddr_un));
+//	memset(&un,0,sizeof(struct sockaddr_un));
 	
 	un.sun_family = AF_UNIX;
-	strcpy(un.sun_path,"unix-domain");
+	sprintf(un.sun_path,"unix-domain.socket");	
+//	strcpy(un.sun_path,"foo.socket");	
+	printf("sizeof struct:%d,pathlen:%d \n",sizeof(struct sockaddr_un),strlen(un.sun_path));
 	unlink(un.sun_path);  							//remoe it first
 
 	if( ( fd = socket(AF_UNIX,SOCK_STREAM,0)) == -1){    //creat an endpoint of communication
@@ -27,8 +19,10 @@ int main(int argc,char*argv[])
 		exit(-1);
 	}
 
-	if( bind( fd,(struct sockaddr *)&un,size) == -1){   //bind the fd with the address.
-		perror("bind failed\n");
+	size = offsetof( struct sockaddr_un,sun_path ) + strlen( un.sun_path ); //size equals size!
+	
+	if( bind(fd,(struct sockaddr *)&un,size) == -1){   //bind the fd with the address.
+		perror("bind failed");
 		exit(0);
 	}else{
 		printf("server bind done\n");
@@ -38,27 +32,26 @@ int main(int argc,char*argv[])
 		perror("listen failed\n");
 		exit(0);
 	}
-#if 0
+//	pre-work done. then waiting for incoming connect().....
 	char tmp, buff[1024];
-	int ret,clifd,i;
-	int len = sizeof(struct sockaddr_un);
+	int ret,clifd,i,len = sizeof(struct sockaddr_un);
 	struct sockaddr_un un_cli;
-
+//	fd set.
 	fd_set fdset;
-	
+//	process will block on this function.
 	if( ( clifd = accept(fd,(struct sockaddr*)&un_cli,&len))< 0 ){ 
-		printf("server accept failed\n");
-		return 0;
-	}else if(clifd > 0){ 
-		
-		while(1)
-		{
+		perror("server accept failed\n");
+		exit(-1);
+	}
+
+	if(clifd > 0){ 
+		do{
 			i = 0;
 			FD_ZERO(&fdset);
 			FD_SET(0,&fdset);
 			FD_SET(clifd,&fdset); 
-
-			ret = select(clifd+1,&fdset,NULL,NULL,NULL);	//wait until one fd could be used.
+//			wait until one of the fds could be used.
+			ret = select(clifd+1,&fdset,NULL,NULL,NULL);
 			if(ret < 0){
 				perror("select failed!\n");
 				exit(-1);
@@ -76,8 +69,7 @@ int main(int argc,char*argv[])
 				printf("%d\n",ret);
 				write(0,buff,ret);
 				}
-			}
+			}while(1);
 		}
-#endif
 	return 0;
 }
