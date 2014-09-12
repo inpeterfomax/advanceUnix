@@ -15,4 +15,5 @@ multi-clients-server:multi-clients-server.o
 
 clean:
 	rm -rf $(OBJS)
+	rm -rf *.socket
 	rm -rf client single-client-server multi-clients-server

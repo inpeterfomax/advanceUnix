@@ -20,9 +20,9 @@ int main(int argc , char *argv[])
 		perror("create socket failed\n");
 		exit(1);
 	}
-	/*
-		bind ; use  the common file as the addr.un_addr;
-	*/
+/*
+	bind ; use  the common file as the addr.un_addr;
+*/
 
 	memset(&server,0,sizeof(struct sockaddr_un));
 	server.sun_family = AF_UNIX;
@@ -33,7 +33,7 @@ int main(int argc , char *argv[])
 
 	size_ser = offsetof(struct sockaddr_un,sun_path) + sizeof(server.sun_path); 
 
-	if( connect(fd ,(const struct sockaddr*)&server,size_ser)){
+	if( 0 != connect(fd ,(const struct sockaddr*)&server,size_ser) ){
 		perror("connect server failed\n");
 		exit(1);
 	} 
@@ -43,11 +43,12 @@ int main(int argc , char *argv[])
 	int num,ret,i=0; 
 	char tmp;
 	
+	FD_ZERO(&fdset);
+//	add STDIN_FILENO and fd.
+	FD_SET(0,&fdset);
+	FD_SET(fd,&fdset);
 	while(1)
 	{
-		FD_ZERO(&fdset);
-		FD_SET(0,&fdset);
-		FD_SET(fd,&fdset);
 		
 		ret = select(fd+1,&fdset,NULL,NULL,NULL);
 		if( ret < 0 ){
@@ -60,11 +61,11 @@ int main(int argc , char *argv[])
 				buff[i++] = tmp;
 			}
 			num = write(fd,buff,i);
-			printf("write %d char into fd :%s\n",num,buff);
+//			printf("write %d char into fd :%s\n",num,buff);
 			if(num != i)
 				printf("do not match !\n");
 			i = 0,num = 0;
-		}else if(FD_ISSET(fd,&fdset)){
+		}else if(FD_ISSET(fd,&fdset)){		//write to net fd.
 			memset(buff,'\0',128);
 //			get message from server & output to stdin
 			while( ( num = read(fd,buff,128)) > 0 ){
