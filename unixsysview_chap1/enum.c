@@ -9,5 +9,7 @@ void main()
 {
 	enum types a=STOP;
 	printf("%d\n",a);
-	printf("for test br functin");
+	printf("for test br functin \n");
+
+	printf("keep add on test-br 1 \n");
 }
