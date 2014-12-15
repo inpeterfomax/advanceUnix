@@ -1,0 +1,10 @@
+&s_cond = 0x804a0c0
+There are 2 threads exist 
+[0xb773d6c0]main [0] m_count=0 (1)
+[0xb773d6c0],csema_p(),1
+[0xb773cb70]1thread 
+[0xb773cb70],csema_v()
+[0xb773d6c0]main [0] (2)
+[0xb773cb70]2thread 0 [0] (1)
+[0xb773d6c0]main [0] (3)
+[0xb773cb70]3thread 0 [0] (2)
