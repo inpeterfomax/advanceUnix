@@ -1,0 +1,66 @@
+gdisk (0.8.1-1build1) precise; urgency=low
+
+  * Rebuild for libicu48.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 21 Nov 2011 16:09:06 +0000
+
+gdisk (0.8.1-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/rules: Install cgdisk binary (curses based)
+  * debian/manpages: Install cgdisk manpage
+  * debian/control:
+    + Remove Intel-based from description thanks Witold Baryluk
+    (Closes: #642363)
+    + Add libncurses5-dev in Build-Depends
+  * debian/copyright: Change to new DEP-5 format
+  * debian/patches/manpages.diff: Refresh patch to escape two hyphen
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Mon, 03 Oct 2011 20:46:30 +0200
+
+gdisk (0.7.2-1) unstable; urgency=low
+
+  * New upstream release, provide fixparts binary
+  * debian/watch: Upstream has renamed tarball gptfdisk and it is now a tar.gz
+  * debian/rules: Install fixparts binary
+  * debian/manpages: Install fixparts.8 manpage
+  * debian/control: Add Vcs-{Browser,Git}, point to collab-maint
+  * Bump to Standards-Version 3.9.2 (no changes needed)
+  * Add build-depends on libicu-dev
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Fri, 22 Jul 2011 15:10:17 +0200
+
+gdisk (0.6.14-1) unstable; urgency=low
+
+  * New upstream release, include new sgdisk binary (Closes: #599437)
+  * debian/patches/manpages.diff: Escape ' in gdisk.8
+    (hyphen-used-as-minus-sign lintian's complain)
+  * debian/rules: More simple version with debhelper 7.0.50
+  * debian/control:
+    + Depends on debhelper (>= 7.0.50~)
+    + Add uuid-dev and libpopt0-dev to Build-Depends
+    + Bump to Standards-Version 3.9.1 (no changes needed)
+    + Warning on description to mention that gdisk is still beta software
+  * debian/docs: add NEWS, (Upstream CHANGELOG is now NEWS file)
+  * debian/manpages: add {s}gdisk.8 manpages
+  * debian/watch: Point to right url (gptfdisk instead of gdisk, other project)
+  * debian/copyright:
+    + Add missing copyright holders (crc32.{cc,h})
+    + Specify GPL-2 or later for crc32.{cc,h} files
+  * Switch to dpkg-source 3.0 (quilt) format (remove debian/README.source)
+  * Bump to Standards-Version 3.9.1 (no changes needed)
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Wed, 26 Jan 2011 20:55:51 +0100
+
+gdisk (0.5.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Drop tiny patch 01_spelling-error-in-binary (fixed upstream)
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Tue, 01 Dec 2009 21:04:25 +0100
+
+gdisk (0.5.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #557516)
+
+ -- Guillaume Delacour <gui@iroqwa.org>  Sun, 01 Nov 2009 15:39:17 +0000

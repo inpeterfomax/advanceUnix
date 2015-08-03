@@ -1,0 +1,42 @@
+Escape ' to avoid error from man and escape to avoid hyphen-used-as-minus-sign
+
+--- a/gdisk.8
++++ b/gdisk.8
+@@ -201,7 +201,7 @@
+ pebibytes (P); for instance, \fI\fB40M\fR\fR specifies a position 40MiB
+ from the start of the disk. You can specify locations relative to the start
+ or end of the specified default range by preceding the number by a '+' or
+-'\-' symbol, as in \fI\fB+2G\fR\fR to specify a point 2GiB after the
++\'\-\' symbol, as in \fI\fB+2G\fR\fR to specify a point 2GiB after the
+ default start sector, or \fI\fB\-200M\fR\fR to specify a point 200MiB
+ before the last available sector. Pressing the Enter key with no input
+ specifies the default value, which is the start of the largest available
+--- a/sgdisk.8
++++ b/sgdisk.8
+@@ -165,7 +165,7 @@
+ \fItoggle\fR options enable you to change the attribute bit value. The
+ \fIset\fR, \fIclear\fR, \fItoggle\fR, and \fIget\fR options work on a
+ bit number; the others work on a hexadecimal bit mask. For example, type 
+-\fBsgdisk -A 4:set:2 /dev/sdc\fR to set the bit 2 attribute (legacy BIOS
++\fBsgdisk \-A 4:set:2 /dev/sdc\fR to set the bit 2 attribute (legacy BIOS
+ bootable) on partition 4 on \fI/dev/sdc\fR.
+ 
+ .TP 
+@@ -346,7 +346,7 @@
+ Clear out all partition data. This includes GPT header data, all partition
+ definitions, and the protective MBR. Note that this operation will, like
+ most other operations, fail on a damaged disk. If you want to prepare a
+-disk you know to be damaged for GPT use, you should first wipe it with -Z
++disk you know to be damaged for GPT use, you should first wipe it with \-Z
+ and then partition it normally. This option will work even if the
+ disk's original partition table is bad; however, most other options on the
+ same command line will be ignored.
+@@ -482,7 +482,7 @@
+ 
+ .TP
+ .B 8
+-Disk replication operation (-R) failed
++Disk replication operation (\-R) failed
+ 
+ .SH "BUGS"
+ As of October 2011 (version 0.8.1), \fBsgdisk\fR
