@@ -1,4 +1,21 @@
-#include"./../include/head.h"
+#include<unistd.h>  //for STDIN_FILENO
+#include<fcntl.h> //for set/get_fl; fcntl....
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<pthread.h>
+#include<syslog.h> //for syslog
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<netinet/in.h>
+#include<arpa/inet.h>
+#include<netdb.h>			//this i can treat as the database
+
+#include<wait.h>
+
+#include<errno.h>
+#include<fcntl.h>
+
 #define SOCKNUM 5
 #define PORTNUM 3072
 
@@ -12,7 +29,8 @@ int main()
 
 	server.sin_family = AF_INET;
 	server.sin_port = htons(PORTNUM);
-	server.sin_addr.s_addr =INADDR_ANY;//192.168.182.187;
+	//server.sin_addr.s_addr =INADDR_ANY;
+	server.sin_addr.s_addr ="192.168.43.1";
 	bzero(&server.sin_zero,0);
 
 	sock_fd = socket(server.sin_family,SOCK_STREAM,0); 

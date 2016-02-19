@@ -48,7 +48,7 @@ int main(int argc,char*argv[])
 	struct sockaddr_un un_cli;
 	int fdqueue[MAXLISTEN];
 	
-	if( (clifd = accept(fd,(struct sockaddr*)&un_cli,&len))<0 ){ //what's the work fo len;
+	if( (clifd = accept(fd,(struct sockaddr*)&un_cli,&len)) <0 ){ //what's the work fo len;
 		printf("server accept failed\n");
 		exit(-1);
 	}else if(clifd > 0){ 

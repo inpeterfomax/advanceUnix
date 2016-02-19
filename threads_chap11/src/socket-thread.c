@@ -178,7 +178,7 @@ int main()
 		printf("create thread-1 filed +++++++++++\n");
 	}else
 		printf("create thread-1 success +++++++++++\n");
-	ret = pthread_create(&pthread1,NULL,thread_fun_srv_2,NULL);
+	ret = pthread_create(&pthread2,NULL,thread_fun_srv_2,NULL);
 	if(ret != 0 ){
 		printf("create thread-2 filed ----------\n");
 	}else
