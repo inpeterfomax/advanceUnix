@@ -1,5 +1,9 @@
 #include<unistd.h> 
 #include<stdio.h>
+
+
+
+
 int noname(int a ,int b,int c) 
 {
 	printf("two parameter:a %d,b%d\n",a,b);
