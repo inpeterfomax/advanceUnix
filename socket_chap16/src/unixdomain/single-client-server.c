@@ -28,7 +28,7 @@ int main(int argc,char*argv[])
 		printf("server bind done\n");
 	}
 	
-	if( listen(fd,5) == -1){			//wait for the connect require.
+	if( listen(fd,5) == -1 ){			//wait for the connect require.
 		perror("listen failed\n");
 		exit(0);
 	}
