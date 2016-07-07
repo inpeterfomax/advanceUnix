@@ -39,9 +39,8 @@ int main(int argc , char *argv[])
 	} 
 
 	fd_set fdset;
-	char buff[128] ;
+	char buff[128] ,tmp;
 	int num,ret,i=0; 
-	char tmp;
 	
 	FD_ZERO(&fdset);
 //	add STDIN_FILENO and fd.
@@ -49,7 +48,6 @@ int main(int argc , char *argv[])
 	FD_SET(fd,&fdset);
 	while(1)
 	{
-		
 		ret = select(fd+1,&fdset,NULL,NULL,NULL);
 		if( ret < 0 ){
 			perror("select failed !\n");
