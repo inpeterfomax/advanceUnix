@@ -17,6 +17,7 @@
 #define DEVICE_NAME "chardev" /* Dev name as it appears in /proc/devices   */
 #define BUF_LEN 80            /* Max length of the message from the device */
 
+//#define IRQNUM gpio_irq
 
 static int major,minor;            /* Major,Minor number assigned to our device driver */
 static int device_open = 0;  /* Is device open?  Used to prevent multiple
@@ -29,6 +30,24 @@ static char *msg_Ptr;
 
 static struct class *tranceiver_class;
 static struct device *tranceiver_dev; 
+
+static int local_open(struct inode *node,struct file*filp)
+{
+	return 0;
+}
+
+static void local_release(struct inode *node,struct file*filp)
+{
+}
+
+static void local_ioctl(struct inode *node,struct file *filp,
+		 unsigned int ioctl_num,unsigned long ioctl_param)
+{
+}
+
+static void local_mmap(struct file *filp, struct vm_area_struct *vma){
+
+}
 
 static const struct file_operations transceiver_ops={
 	.owner = THIS_MODULE,
@@ -79,11 +98,11 @@ static __init int transceiver_init(void)
 		goto register_fail;
 	}
 	tranceiver_class = creat_class(THIS_MODULE,CLASS_NAME);
-	if( IS_ERR(tranceiver_class)){
+	if( IS_ERR(tranceiver_class) ){
 		retval =  PTR_ERR(tranceiver_class);
 		goto class_fail;
 	}
-	/* With a class, the easiest way to instantiate a device is to call device_create() */
+	/* With a class, the easiest way to instantiate a device is to call device_create() . Creat /dev/device */
  	tranceiver_dev = device_create(tranceiver_class, NULL, mycdev, NULL, CLASS_NAME "_" DEVICE_NAME);
 	if (IS_ERR(tranceiver_dev)) {
 		printk("failed to create device '%s_%s'\n", CLASS_NAME, DEVICE_NAME);
@@ -100,8 +119,8 @@ static __init int transceiver_init(void)
 		while (--i >= 0)
 			device_remove_file(tranceiver_dev, &device_attrs[i]);
 	}
-
 	return 0;
+	
 failed_devreg:
 	class_destroy(tranceiver_class);
 	return retval;
