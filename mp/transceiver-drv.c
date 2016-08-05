@@ -27,26 +27,6 @@ struct local_dev *mydev=NULL;
 static struct class *tranceiver_class;
 static struct device *tranceiver_dev; 
 
-static int local_open(struct inode *node,struct file*filp)
-{
-	return 0;
-}
-
-static int local_release(struct inode *node,struct file*filp)
-{
-	return 0;
-}
-
-static int local_ioctl(struct inode *node,struct file *filp,
-		 unsigned int ioctl_num,unsigned long ioctl_param)
-{
-	return 0;
-}
-
-static int local_mmap(struct file *filp, struct vm_area_struct *vma)
-{
-	return 0;
-}
 
 static const struct file_operations transceiver_ops={
 	.owner = THIS_MODULE,
@@ -81,7 +61,7 @@ static struct device_attribute device_attrs[]={
 	&local_dev_attr,
 	NULL,
 };
-
+#if 0
 irq_handler cmd_handler(){
 	clean_irq_state(s);
 	disable_irq();
@@ -94,9 +74,10 @@ irq_handler cmd_handler(){
 	/*wait for response msg from mpv50*/
 	write_resp_to_register();
 }
-
+#endif
 static __init int transceiver_init(void)
 {
+
 	int retval,i;
 	mydev =(struct local_dev *) kmalloc(sizeof(struct local_dev),GFP_KERNEL);
 	if(!mydev){
@@ -109,28 +90,36 @@ static __init int transceiver_init(void)
 		goto alloc_fail;
 	}
 	major = MAJOR(mycdevnum);
-
-	cdev_init(&mydev->cdev,&transceiver_ops);
-	mydev->cdev.owner = THIS_MODULE;
-	mydev->cdev.ops = &transceiver_ops;
-	retval = cdev_add(&mydev->cdev,mycdevnum,1);
+	printk(KERN_INFO "%s %d mycdevnum=%d major=%d \n",__FUNCTION__,__LINE__,mycdevnum,major);
+	/*init cdev.*/
+	mydev->cdev = cdev_alloc();
+	if( !(mydev->cdev) ){
+		printk(KERN_ERR "cdev alloc fail\n");
+		goto alloc_fail;
+	}
+	cdev_init(mydev->cdev,&transceiver_ops);
+	mydev->cdev->owner = THIS_MODULE;
+	mydev->cdev->ops = &transceiver_ops;
+	retval = cdev_add(mydev->cdev,mycdevnum,1);
+	//retval = register_chrdev(major,DEVICE_NAME,&transceiver_ops);
 	if( retval ){
 		printk("%s %d , retval=%d \n",__FUNCTION__,__LINE__,retval);
-		goto class_fail;
+		goto register_dev;
 	}
 	
 	tranceiver_class = class_create(THIS_MODULE,CLASS_NAME);
 	if( IS_ERR(tranceiver_class) ){
 		retval =  PTR_ERR(tranceiver_class);
-		goto class_fail;
+		goto class_create;
 	}
 	/* With a class, the easiest way to instantiate a device is to call device_create() . Creat /dev/device */
- 	tranceiver_dev = device_create(tranceiver_class, NULL, mycdevnum, NULL, CLASS_NAME "_" DEVICE_NAME);
+ 	tranceiver_dev = device_create(tranceiver_class, NULL, mycdevnum, NULL, DEVICE_NAME);
 	if (IS_ERR(tranceiver_dev)) {
 		printk("failed to create device '%s_%s'\n", CLASS_NAME, DEVICE_NAME);
 	    retval = PTR_ERR(tranceiver_dev);
 	    goto failed_devreg;
 	  }
+	#if 0
 	/*Create attribute files*/
 	for (i = 0; i < ARRAY_SIZE(device_attrs); i++) {
 		retval = device_create_file(tranceiver_dev, &device_attrs[i]);
@@ -141,22 +130,19 @@ static __init int transceiver_init(void)
 		while (--i >= 0)
 			device_remove_file(tranceiver_dev, &device_attrs[i]);
 	}
-
+	#endif
 	/*alloc irq for cmd done*/
-	retval = request_irq(gpio_to_irq(gpio),handler,flag,device);
+	//retval = request_irq(gpio_to_irq(gpio),handler,flag,device);
 
 	
 	return 0;
 	
 failed_devreg:
 	class_destroy(tranceiver_class);
-	return retval;
-class_fail:
-	unregister_chrdev_region(mycdevnum,DEVICE_NAME);
-	return -1;
-register_fail:
-	return retval;
-
+class_create:
+	unregister_chrdev(major,DEVICE_NAME);
+register_dev:
+	unregister_chrdev_region(mycdevnum,1);
 alloc_fail:
 	return retval;
 	
@@ -164,17 +150,19 @@ alloc_fail:
 static __exit void transceiver_clean(void)
 {
 	int i;
-		
+#if 0
 	/*Remove attribute files*/
 	for (i = 0; i < ARRAY_SIZE(device_attrs); i++) {
 		device_remove_file(tranceiver_dev, &device_attrs[i]);
 	}
+#endif
+	printk(KERN_ALERT "clean transceiver module \n");
 	device_destroy(tranceiver_class, mycdevnum);
 	class_destroy(tranceiver_class);
 	unregister_chrdev(major, DEVICE_NAME);
 	/*free mydev struct.*/
-	if( mydev )
-		kfree(mydev);
+	cdev_del(mydev->cdev);
+	kfree(mydev);
 }
 
 
@@ -187,7 +175,6 @@ module_exit(transceiver_clean);
 					then send cmd to mpv50 process \
 					and receive msg form mpv50 then write back response \
 					to resp-register."
-
-MODULE_LICENSE("GPL");
+MODULE_LICENSE("Dual BSD/GPL");
 MODULE_AUTHOR("peter_gu@realsil.com.cn");
 MODULE_DESCRIPTION(DESCRIPTION);

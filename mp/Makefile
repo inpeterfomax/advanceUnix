@@ -4,19 +4,28 @@ ARCH := rlx
 CROSS_COMPILE:= $(DIR_LINUX)/../toolchain/rsdk-1.5.5-5281-EB-2.6.30-0.9.30.3-110714/bin/rsdk-linux-
 KSRC := $(DIR_LINUX)
 
+CC := $(CROSS_COMPILE)gcc
+
 ifneq ($(KERNELRELEASE),)
-		obj-m :=  transceiver-drv.o 
-	#transceiver-drv-objs := transceiver-drv.o transceiver-func.o
+	#obj-m :=  transceiver-drv.o 
+	obj-m := transceiver.o
+	transceiver-objs := transceiver-drv.o transceiver-func.o
 else
 	PWD := $(shell pwd)
 
-all : modules
+all : modules mpv50
 modules:
 	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KSRC) M=$(PWD)  modules
+
+mpv50.o:mpv50.c
+	$(CC) -c mpv50.c
+mpv50:mpv50.o
+	$(CC) -o mpv50.o
 
 .PHNHY: modules clean
 
 clean:
+	rm *.out 
 	rm -rf *.o *.ko *~ core .depend *.mod.c .*.cmd .tmp_versions .*.o.d *.order *.symvers
 	
 endif
