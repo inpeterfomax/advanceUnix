@@ -17,8 +17,11 @@ int main()
 	printf("buff= %s\n",buff);
 	unsigned int buff_int[128]={12,13,14};
 	//sscanf(buff_int,"%d","%d","%d",&d,&e,&f);
-	scanf("%d","%d","%d",&d,&e,&f);
+//scanf("%d","%d","%d",&d,&e,&f);
 	printf("d=%d e=%d f=%d\n",d,e,f);
+
+	sprintf(buff,"Hello world!");
+	printf("buff=%s \n",buff);
 
 	return 0;
 }
