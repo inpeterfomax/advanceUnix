@@ -23,6 +23,16 @@ int main()
 	sprintf(buff,"Hello world!");
 	printf("buff=%s \n",buff);
 
+	char rawdata[512]={};
+	char extra[1024] = {0};
+	memset(extra,sizeof(extra));
+	int i = 0;
+	sprintf(extra,"\n0xxx\t");
+	for(i=0;i<512;i++){
+		sprintf(extra,"%s%02X",extra,rawdata[i]);
+		printf("extra:%s\n",extra);
+	}
+
 	return 0;
 }
 
