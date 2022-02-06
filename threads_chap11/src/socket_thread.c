@@ -33,7 +33,7 @@ void* thread_fun_srv_1(void *a)
 	while(1)
 		printf("this is function %s tmp->a:%d\n",__func__,tmp->a);
 */
-	printf("%s %d thread 1 run....\n",__func__,__LINE__);
+	printf("%s %d thread 1 run,tid=0x%lx ....\n",__func__,__LINE__,pthread_self());
 	int listenfd,size;
 	struct sockaddr_un un;
 
@@ -43,7 +43,7 @@ void* thread_fun_srv_1(void *a)
 	un.sun_family = AF_UNIX;  //unix domain socket. processes in the same system.socket(domain,type,protocol)
 
 	sprintf(un.sun_path,"./unix-domain-%d",getpid());
-	unlink(un.sun_path);  							//remoe it first
+	unlink(un.sun_path);  							//remove it first
 
 	if( ( listenfd = socket(AF_UNIX,SOCK_STREAM,0)) == -1){    //creat an endpoint of communication
 		perror("create socket failed\n");
@@ -58,7 +58,7 @@ void* thread_fun_srv_1(void *a)
 		perror("listen failed\n");
 		exit(0);
 	}
-	printf("%s %d after listen\n",__func__,__LINE__);
+	printf("%s %d after listen before accept...\n",__func__,__LINE__);
 	//fd operation....
 	fd_set fdset;
 	FD_ZERO(&fdset);
@@ -85,8 +85,8 @@ void* thread_fun_srv_1(void *a)
 	printf("%s %d after accept\n",__func__,__LINE__);
 
 	struct  pollfd clientfds[OPEN_MAX];
-	//Ìí¼Ó¼àÌýÃèÊö·û
-	clientfds[0].fd = listenfd;
+	
+    clientfds[0].fd = listenfd;
 	clientfds[0].events = POLLIN;
 	
 	printf("before poll function\n");
@@ -153,9 +153,10 @@ void* thread_fun_srv_2(void* a)
 
 	printf("%s %d after accept\n",__func__,__LINE__);
 
+
 	struct  pollfd clientfds[OPEN_MAX];
-	//Ìí¼Ó¼àÌýÃèÊö·û
-	clientfds[0].fd = listenfd;
+
+    clientfds[0].fd = listenfd;
 	clientfds[0].events = POLLIN;
 	
 	printf("before poll function\n");
@@ -187,7 +188,10 @@ int main()
 	printf("%s %d \n",__func__,__LINE__);
 
 	pthread_join(pthread1,NULL);
-	pthread_join(pthread2,NULL);
+
+	printf("%s %d \n",__func__,__LINE__);
+    
+    pthread_join(pthread2,NULL);
 	
 	printf("%s %d \n",__func__,__LINE__);
 

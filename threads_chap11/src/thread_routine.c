@@ -173,6 +173,7 @@ int main()
 	int ret;
 	pthread_t pthread1,pthread2;
 	mytype a={1,2,NULL,NULL};
+
 	ret = pthread_create(&pthread1,NULL,thread_fun_srv_1,NULL);
 	if(ret != 0 ){
 		printf("create thread-1 filed +++++++++++\n");
