@@ -18,4 +18,4 @@ client:client.o client_api.o
 	gcc client.o client_api.o -o client -lpthread
 
 clean:
-	rm *.o
+	rm *.o client *.out

@@ -40,7 +40,7 @@ int main(void)
 		if( -1 == sem_wait(&mydata.mysem)){
 			perror("sem_wait error\n");
 			return(-1);
-		}else {
+		} else {
 			mydata.flag = -1;
 			printf("%d has change flag value to %d\n",getpid(),mydata.flag);
 			if( -1 == sem_post(&mydata.mysem)){

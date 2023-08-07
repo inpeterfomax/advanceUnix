@@ -48,6 +48,7 @@ int main(int argc,char*argv[])
 		exit(-1);
 	}else{
 		waitpid(pid,NULL);
+		msgctl(msgid,IPC_RMID,NULL);
 	}
 	return 0;
 }
