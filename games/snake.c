@@ -27,16 +27,16 @@
 
 struct stNode
 {
-		        int x;
-				        int y;
-						        char shape;
-								        struct stNode *next;
+    int x;
+    int y;
+    char shape;
+    struct stNode *next;
 };
 
 struct stFood
 {
-		        int x;
-				        int y;
+	int x;
+	int y;
 };
 
 struct stNode *gpstHead,*gpstTail;
@@ -48,35 +48,34 @@ int giLen=0;
 
 void settty(int iFlag)
 {
-		        int fd;
-				        struct termio stTerm;
+	int fd;
+    struct termio stTerm;
 
-						        if((fd = open(ttyname(1),O_RDWR))==-1)        return;
-								        if(iFlag == 1)
-												        {
-																                ioctl(fd,TCGETA,&stTerm);
-																				                stTerm.c_lflag &= ~ICANON;
-																								                stTerm.c_lflag &= ~ECHO;
-																												                stTerm.c_cc[4] = 1;
-																																                stTerm.c_cc[5] = 0;
-																																				                stTerm.c_iflag &= ~ISTRIP;
-																																								                stTerm.c_cflag |= CS8;
-																																												                stTerm.c_cflag &= ~PARENB;
-																																																                ioctl(fd,TCSETA,&stTerm);
-																																																				        }
-										        else
-														        {
-																		                ioctl(fd,TCGETA,&stTerm);
-																						                stTerm.c_lflag |= ICANON;
-																										                stTerm.c_lflag |= ECHO;
-																														                stTerm.c_cc[4] = 4;
-																																		                stTerm.c_cc[5] = 5;
-																																						                stTerm.c_iflag &= ~ISTRIP;
-																																										                stTerm.c_cflag |= CS8;
-																																														                stTerm.c_cflag &= ~PARENB;
-																																																		                ioctl(fd,TCSETA,&stTerm);
-																																																						        }
-												        close(fd);
+    if((fd = open(ttyname(1),O_RDWR))==-1)
+        return;
+	if(iFlag == 1)
+	{
+		ioctl(fd,TCGETA,&stTerm);
+		stTerm.c_lflag &= ~ICANON;
+		stTerm.c_lflag &= ~ECHO;
+		stTerm.c_cc[4] = 1;
+		stTerm.c_cc[5] = 0;
+		stTerm.c_iflag &= ~ISTRIP;
+		stTerm.c_cflag |= CS8;
+		stTerm.c_cflag &= ~PARENB;
+		ioctl(fd,TCSETA,&stTerm);
+	} else {
+		ioctl(fd,TCGETA,&stTerm);
+		stTerm.c_lflag |= ICANON;
+		stTerm.c_lflag |= ECHO;
+		stTerm.c_cc[4] = 4;
+		stTerm.c_cc[5] = 5;
+		stTerm.c_iflag &= ~ISTRIP;
+		stTerm.c_cflag |= CS8;
+		stTerm.c_cflag &= ~PARENB;
+		ioctl(fd,TCSETA,&stTerm);
+	}
+	close(fd);
 }
 
 void vDrawOneNode(struct stNode *pstNode,int iFlag)
