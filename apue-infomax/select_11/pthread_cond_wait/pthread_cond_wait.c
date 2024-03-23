@@ -16,7 +16,6 @@ void * thread1(void* p){
 	pthread_mutex_unlock(&mutex);
 }
 
-
 void* thread2(void*p){
   int i=0;
   for(i;i<1;i++){
